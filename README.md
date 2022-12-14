@@ -10,6 +10,8 @@
 > docker run -p 9000:8000 --env PORT=8000 -d --rm --name feedback-app -v feedback:/app/feedback -v $(pwd):/app -v /app/node_modules [id]
 > docker run -p 9000:8000 --env-file ./.env -d --rm --name feedback-app -v feedback:/app/feedback -v $(pwd):/app -v /app/node_modules [id]
 > docker run --rm -it [id]
+> docker network create favorites-net
+> docker run -d --rm --name mongodb --network favorites-net mongo
 > docker images
 > docker image prune -a
 > docker ps -a
