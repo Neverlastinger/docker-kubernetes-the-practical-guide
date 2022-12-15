@@ -11,7 +11,9 @@
 > docker run -p 9000:8000 --env-file ./.env -d --rm --name feedback-app -v feedback:/app/feedback -v $(pwd):/app -v /app/node_modules [id]
 > docker run --rm -it [id]
 > docker network create favorites-net
-> docker run -d --rm --name mongodb --network favorites-net mongo
+> docker run -d --rm --name mongodb --network [network-name] mongo
+> docker run -d --rm --name mongodb -p 27017:27017 mongo
+> docker run -d --rm --name mongodb -v data:/data/db  --network [network-name] -e MONGO_INITDB_ROOT_USERNAME=username -e MONGO_INITDB_ROOT_PASSWORD=password mongo
 > docker images
 > docker image prune -a
 > docker ps -a
