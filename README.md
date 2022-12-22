@@ -14,6 +14,7 @@
 > docker run -d --rm --name mongodb --network [network-name] mongo
 > docker run -d --rm --name mongodb -p 27017:27017 mongo
 > docker run -d --rm --name mongodb -v data:/data/db  --network [network-name] -e MONGO_INITDB_ROOT_USERNAME=username -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+> docker container prune
 > docker images
 > docker image prune -a
 > docker ps -a
@@ -21,4 +22,12 @@
 > docker rmi [name/id]
 > docker volume ls
 > docker volume prune
+```
+
+```javascript
+
+> docker-compose up -d
+> docker-compose up -d --build
+> docker-compose down
+> docker-compose down -v
 ```

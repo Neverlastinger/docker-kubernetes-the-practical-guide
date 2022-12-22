@@ -7,3 +7,9 @@
 > docker build -t goals-react .
 > docker run -v $(pwd)/src:/app/src --name goals-frontend --rm -d -p 9000:3000 -it goals-react
 ```
+
+```javascript
+
+> docker-compose up -d
+> docker-compose down
+```
