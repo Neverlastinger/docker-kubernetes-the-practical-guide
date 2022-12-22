@@ -14,6 +14,9 @@
 > docker run -d --rm --name mongodb --network [network-name] mongo
 > docker run -d --rm --name mongodb -p 27017:27017 mongo
 > docker run -d --rm --name mongodb -v data:/data/db  --network [network-name] -e MONGO_INITDB_ROOT_USERNAME=username -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+> docker run -it -d node
+> docker exec -it [container-name] npm init
+> docker run -it node npm init
 > docker container prune
 > docker images
 > docker image prune -a
